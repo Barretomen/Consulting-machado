@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Submiss&#227;o conclu&#237;da | Machados Consulting</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body class="confirmation-page page-enter">
+    <main class="confirmation-wrap">
+      <section class="confirmation-card">
+        <a class="brand confirmation-brand page-link" href="index.html" aria-label="Machados Consulting">
+          <svg class="brand-logo" viewBox="0 0 760 170" aria-hidden="true" focusable="false"><defs><linearGradient id="shield-confirmacao" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#112b63"/><stop offset="1" stop-color="#071f42"/></linearGradient></defs><path d="M22 18h130c9 0 16 7 16 16v72c0 34-29 54-81 77C35 160 6 140 6 106V34c0-9 7-16 16-16Z" fill="url(#shield-confirmacao)"/><path d="M24 30h126c3 0 6 3 6 6v68c0 25-21 42-69 64-48-22-69-39-69-64V36c0-3 3-6 6-6Z" fill="none" stroke="#244a91" stroke-width="6"/><text x="42" y="112" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="86" font-weight="700">M</text><text x="210" y="76" fill="#102b63" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="52" font-weight="900" letter-spacing="1">MACHADOS</text><text x="210" y="125" fill="#102b63" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="52" font-weight="900" letter-spacing="1">CONSULTING</text><text x="214" y="155" fill="#7a8398" font-family="Arial, Helvetica, sans-serif" font-size="21">Contabilidade simplificada | Assessoria Jur&#237;dica</text></svg>
+        </a>
+        <div class="success-mark" aria-hidden="true">&#10003;</div>
+        <p class="eyebrow">Submiss&#227;o conclu&#237;da</p>
+        <h1>Recebemos os seus dados com sucesso.</h1>
+        <div class="request-box">
+          <span>N&#250;mero do pedido</span>
+          <strong id="request-number">IRS-2026-0048</strong>
+        </div>
+        <div class="request-box">
+          <span>Estado</span>
+          <strong>Em an&#225;lise</strong>
+        </div>
+        <p>A equipa ir&#225; validar a informa&#231;&#227;o recebida e entrar&#225; em contacto caso seja necess&#225;rio algum esclarecimento adicional.</p>
+        <div class="confirmation-actions">
+          <a class="button primary" id="whatsapp-confirmation" href="https://wa.me/351921176038" target="_blank" rel="noopener">Enviar aviso por WhatsApp</a>
+          <a class="button secondary on-light page-link" href="index.html">Voltar ao site</a>
+        </div>
+      </section>
+    </main>
+    <script>
+      const savedRequest = sessionStorage.getItem("irsRequestNumber");
+      if (savedRequest) {
+        document.getElementById("request-number").textContent = savedRequest;
+      }
+      const requestNumber = savedRequest || "IRS-2026-0048";
+      const message = `Olá Machados Consulting, submeti o pedido de IRS 2026. Número do pedido: ${requestNumber}.`;
+      document.getElementById("whatsapp-confirmation").href = `https://wa.me/351921176038?text=${encodeURIComponent(message)}`;
+    </script>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
