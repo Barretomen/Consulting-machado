@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Submissao concluida | Machados Consulting</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body class="confirmation-page">
+    <main class="confirmation-wrap">
+      <section class="confirmation-card">
+        <a class="brand confirmation-brand" href="index.html" aria-label="Machados Consulting">
+          <span class="brand-mark">MC</span>
+          <span>
+            <strong>Machados Consulting</strong>
+            <small>Contabilidade & Fiscalidade</small>
+          </span>
+        </a>
+        <div class="success-mark" aria-hidden="true">✓</div>
+        <p class="eyebrow">Submissao concluida</p>
+        <h1>Recebemos os seus dados com sucesso.</h1>
+        <div class="request-box">
+          <span>Numero do pedido</span>
+          <strong id="request-number">IRS-2026-0048</strong>
+        </div>
+        <div class="request-box">
+          <span>Estado</span>
+          <strong>Em analise</strong>
+        </div>
+        <p>A equipa ira validar a informacao recebida e entrara em contacto caso seja necessario algum esclarecimento adicional.</p>
+        <div class="confirmation-actions">
+          <a class="button primary" id="whatsapp-confirmation" href="https://wa.me/351921176038" target="_blank" rel="noopener">Enviar aviso por WhatsApp</a>
+          <a class="button secondary on-light" href="index.html">Voltar ao site</a>
+        </div>
+      </section>
+    </main>
+    <script>
+      const savedRequest = sessionStorage.getItem("irsRequestNumber");
+      if (savedRequest) {
+        document.getElementById("request-number").textContent = savedRequest;
+      }
+      const requestNumber = savedRequest || "IRS-2026-0048";
+      const message = `Ola Machados Consulting, submeti o pedido de IRS 2026. Numero do pedido: ${requestNumber}.`;
+      document.getElementById("whatsapp-confirmation").href = `https://wa.me/351921176038?text=${encodeURIComponent(message)}`;
+    </script>
+  </body>
+</html>
