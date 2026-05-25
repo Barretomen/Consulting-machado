@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>IRS 2026 - Recolha de Informacao | Machados Consulting</title>
+    <title>IRS 2026 - Recolha de Informa&ccedil;&atilde;o | Machados Consulting</title>
     <meta name="description" content="Envie os dados e documentos necessarios para a preparacao da declaracao de IRS 2026 pela Machados Consulting.">
     <link rel="stylesheet" href="assets/assets/styles.css">
   </head>
@@ -19,7 +19,7 @@
       <nav class="nav" aria-label="Navegacao principal">
         <a href="index.html#servicos">Servicos</a>
         <a href="index.html#metodo">Metodo</a>
-        <a class="nav-cta" href="#formulario">Formulario IRS</a>
+        <a class="nav-cta" href="#formulario">Formul&aacute;rio IRS</a>
       </nav>
     </header>
 
@@ -28,11 +28,11 @@
         <div class="hero-media" role="img" aria-label="Documentos fiscais e calculadora numa secretaria"></div>
         <div class="hero-content">
           <p class="eyebrow">IRS 2026 - Recolha de Informacao</p>
-          <h1>IRS sem complicacoes</h1>
+          <h1>IRS sem complica&ccedil;&otilde;es</h1>
           <p class="hero-copy">Envie os seus dados e documentos em poucos minutos. A nossa equipa trata da analise, validacao e submissao da sua declaracao.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#formulario">Comecar agora</a>
-            <a class="button secondary" href="#acesso-financas">Acesso as Financas</a>
+            <a class="button primary" href="#formulario">Come&ccedil;ar agora</a>
+            <a class="button secondary" href="#acesso-financas">Acesso &agrave;s Finan&ccedil;as</a>
           </div>
         </div>
       </section>
@@ -40,7 +40,7 @@
       <section class="section form-shell" id="formulario">
         <div class="form-intro">
           <p class="eyebrow">Pedido digital</p>
-          <h2>Formulario de recolha IRS 2026</h2>
+          <h2>Formul&aacute;rio de recolha IRS 2026</h2>
           <p>Preencha apenas com informacao verdadeira e atualizada. Se algum documento ainda nao estiver disponivel, indique-o nas observacoes.</p>
         </div>
 
@@ -50,10 +50,10 @@
               <li class="active" data-step-label="1">Dados pessoais</li>
               <li data-step-label="2">Agregado familiar</li>
               <li data-step-label="3">Rendimentos</li>
-              <li data-step-label="4">Habitacao</li>
+              <li data-step-label="4">Habita&ccedil;&atilde;o</li>
               <li data-step-label="5">Documentos</li>
               <li data-step-label="6">Acesso as Financas</li>
-              <li data-step-label="7">Confirmacao</li>
+              <li data-step-label="7">Confirma&ccedil;&atilde;o</li>
             </ol>
             <div class="secure-note">
               <strong>Tratamento reservado</strong>
@@ -66,8 +66,10 @@
             <input type="hidden" name="_subject" value="Novo pedido IRS 2026 - Machados Consulting">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://barretomen.github.io/Consulting-machado/confirmacao.html">
             <input type="hidden" name="numero_pedido" value="">
-            <input type="hidden" name="contacto_whatsapp" value="+351 921 176 038">
+            <input type="hidden" name="contacto_<span class="whatsapp-icon" aria-hidden="true">WA</span><span>Para outras d&uacute;vidas contacte-nos</span>
+          </a></span>" value="+351 921 176 038">
             <p class="hidden-field">
               <label>Empresa <input name="empresa"></label>
             </p>
@@ -217,6 +219,10 @@
     <a class="whatsapp-float" href="https://wa.me/351921176038?text=Ola%20Machados%20Consulting%2C%20pretendo%20apoio%20com%20o%20IRS%202026." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
       WhatsApp
     </a>
-    <script src="assets/assets/script.js"></script>
+    <script>
+      document.querySelector('.irs-form')?.addEventListener('submit',function(e){if(this.dataset.nativeSubmit)return;if(!this.checkValidity())return;e.preventDefault();this.dataset.nativeSubmit='1';setTimeout(()=>this.submit(),80);},true);
+    </script>
+        <script src="assets/assets/script.js"></script>
+    </script>
   </body>
 </html>
